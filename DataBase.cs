@@ -13,7 +13,9 @@ namespace FileGestion_v1._0
         string uid;
         string password;
         string connectionString;
-        MySqlConnection connection;
+        MySqlConnection connection;  
+
+
         public bool openConnection()
         {
             server = "localhost";
