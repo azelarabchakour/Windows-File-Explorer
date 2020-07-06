@@ -18,6 +18,7 @@ namespace FileGestion_v1._0
 
         public bool openConnection()
         {
+
             server = "localhost";
             database = "csharpdatabase";
             uid = "root";
