@@ -594,6 +594,7 @@ namespace FileGestion_v1._0
                 TreeNode t = new TreeNode();
                 t.Text = dd.getNom();
                 node.Nodes.Add(t);
+
                 tree(dd.getIdDossier(), t);
             }
         }
