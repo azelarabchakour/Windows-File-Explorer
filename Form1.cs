@@ -92,6 +92,8 @@ namespace FileGestion_v1._0
             if (listView1.SelectedIndices.Count <= 0)
             {
                 return;
+
+
             }
             int intselectedindex = listView1.SelectedIndices[0];
             if (intselectedindex >= 0)
