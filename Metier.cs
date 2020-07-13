@@ -41,6 +41,10 @@ namespace FileGestion_v1._0
             DataBase db = new DataBase();
             db.deleteDossier(idDossier);
         }
+        public void deleteDossierRecurs(int idDossier)
+        {
+
+        }
         public void deleteFichier(int idFichier)
         {
             DataBase db = new DataBase();
