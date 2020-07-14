@@ -44,7 +44,17 @@ namespace FileGestion_v1._0
         }
         public void deleteDossierRecurs(int idDossier)
         {
-             
+            List<Dossier> list = new List<Dossier>();
+            dataBase = new DataBase();
+            list = dataBase.SelectDossier(idDossier);
+            if (list != null)
+            {
+                foreach(Dossier d in list)
+                {
+                    deleteDossierRecurs(d.getIdDossier());
+                    dataBase.deleteDossier(d.getIdDossier());
+                }
+            }
         }
         public void deleteFichier(int idFichier)
         {

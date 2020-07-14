@@ -792,13 +792,16 @@ namespace FileGestion_v1._0
             int intselectedindex = listView1.SelectedIndices[0];
             if (intselectedindex >= 0)
             {
+                //folder
                 if (listView1.Items[intselectedindex].ImageIndex == 0)
                 {
                     String text = listView1.Items[intselectedindex].Text;
                     Metier m = new Metier();
                     int id = m.returnId(currentDirectory, text);
-                    m.deleteDossier(id);
+                    //m.deleteDossier(id);
+                    m.deleteDossierRecurs(id);
                 }
+                //file
                 else if (listView1.Items[intselectedindex].ImageIndex == 1)
                 {
                     String text = listView1.Items[intselectedindex].Text;
