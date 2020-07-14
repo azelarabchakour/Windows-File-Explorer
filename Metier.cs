@@ -8,6 +8,7 @@ namespace FileGestion_v1._0
 {
     class Metier
     {
+        DataBase dataBase;
         public List<Dossier> listerDossier(int fatherId)
         {
             List<Dossier> list = new List<Dossier>();
@@ -43,7 +44,7 @@ namespace FileGestion_v1._0
         }
         public void deleteDossierRecurs(int idDossier)
         {
-
+             
         }
         public void deleteFichier(int idFichier)
         {
