@@ -763,10 +763,13 @@ namespace FileGestion_v1._0
                         String text = listView1.Items[intselectedindex].Text;
                         Metier m = new Metier();
                         int id = m.returnId(currentDirectory, text);
-                        m.deleteDossier(id);
-                    
                         
-                }else if(listView1.Items[intselectedindex].ImageIndex == 1)
+                        m.deleteDossierRecurs(id);
+                        m.deleteDossier(id);
+
+
+                }
+                else if(listView1.Items[intselectedindex].ImageIndex == 1)
                 {
                     String text = listView1.Items[intselectedindex].Text;
                     Metier m = new Metier();
@@ -798,8 +801,9 @@ namespace FileGestion_v1._0
                     String text = listView1.Items[intselectedindex].Text;
                     Metier m = new Metier();
                     int id = m.returnId(currentDirectory, text);
-                    //m.deleteDossier(id);
+                    
                     m.deleteDossierRecurs(id);
+                    m.deleteDossier(id);
                 }
                 //file
                 else if (listView1.Items[intselectedindex].ImageIndex == 1)

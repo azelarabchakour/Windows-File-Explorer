@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.DirectoryServices;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -54,6 +55,13 @@ namespace FileGestion_v1._0
                     deleteDossierRecurs(d.getIdDossier());
                     dataBase.deleteDossier(d.getIdDossier());
                 }
+            }
+            List<Fichier> listFiles = new List<Fichier>();
+            listFiles = dataBase.SelectFichier(idDossier);
+            if(listFiles != null)
+            {
+                foreach (Fichier file in listFiles)
+                    dataBase.deleteFichier(file.getIdFichier());
             }
         }
         public void deleteFichier(int idFichier)
