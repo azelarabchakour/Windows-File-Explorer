@@ -85,6 +85,19 @@ namespace FileGestion_v1._0
             DataBase db = new DataBase();
             db.copyDossier("dossier", idSource, fatherIdDestionation);
         }
+        public void copyDossierRecurs(int idSource, int fatherIdDestination)
+        {
+            dataBase = new DataBase();
+            List<Dossier> listFolders = new List<Dossier>();
+            listFolders = dataBase.SelectDossier(idSource);
+            if(listFolders != null)
+            {
+                foreach(Dossier d in listFolders)
+                {
+                    
+                }
+            }
+        }
         public void copyFichier(int idSource, int fatherIdDestionation)
         {
             DataBase db = new DataBase();
