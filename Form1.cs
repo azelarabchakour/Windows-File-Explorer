@@ -386,7 +386,7 @@ namespace FileGestion_v1._0
         {
             Dossier d = new Dossier("New Folder", currentDirectory);
             Metier m = new Metier();
-            int i = 0;
+            int i = 1;
             while (m.find(d.getNom(), currentDirectory))
             {
                 d.setNom("New Folder (" + i + ")");
