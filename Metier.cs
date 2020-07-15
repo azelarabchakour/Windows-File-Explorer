@@ -148,6 +148,20 @@ namespace FileGestion_v1._0
             DataBase db = new DataBase();
             return db.search(id, name);
         }
+        public List<Dossier> advancedSearch(int id, String name)
+        {
+            dataBase = new DataBase();
+            List<Dossier> listFolders = new List<Dossier>();
+            listFolders = dataBase.SelectDossier(id);
+            List<Dossier> returnedFoldersList = new List<Dossier>();
+            foreach(Dossier d in listFolders)
+            {
+                if (d.getNom().Contains(name))
+                    returnedFoldersList.Add(d);
+            }
+            return returnedFoldersList;
+
+        }
         public String searchWithId(int id)
         {
             DataBase db = new DataBase();

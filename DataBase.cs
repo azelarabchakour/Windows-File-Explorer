@@ -490,6 +490,7 @@ namespace FileGestion_v1._0
             }
             return list;
         }
+
         public String searchWithId(int id)
         {
             String s = "";

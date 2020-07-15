@@ -832,11 +832,13 @@ namespace FileGestion_v1._0
         }
         private void SearchBox_KeyDown(object sender, KeyEventArgs e)
         {
+            Metier m = new Metier();
             if (e.KeyCode == Keys.Enter)
             {
                 listView1.Items.Clear();
                 List<Dossier> d = new List<Dossier>();
-                d = search(currentDirectory, searchBox.Text);
+                d = m.advancedSearch(currentDirectory, searchBox.Text);
+                //d = search(currentDirectory, searchBox.Text);
                 for (int i = 0; i < d.Count(); i++)
                 {
                     string h = d[i].getNom();
