@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Design;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -209,8 +210,8 @@ namespace FileGestion_v1._0
                     if(ForD == 0)
                     {
                         Metier m = new Metier();
-                        m.copyDossier(idCopier, currentDirectory);
-                        //m.copyDemo(idCopier, currentDirectory);
+                        //m.copyDossier(idCopier, currentDirectory);
+                        m.copyDossierRecurs(idCopier, currentDirectory);
                     }else if(ForD == 1)
                     {
                         Metier m = new Metier();

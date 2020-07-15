@@ -541,5 +541,37 @@ namespace FileGestion_v1._0
             else
                 return max;
         }
+        public int getLastFileCreated()
+        {
+            string query = "SELECT * FROM fichier";
+            int max = 0;
+
+            //Open connection
+            if (this.openConnection() == true)
+            {
+                //Create Command
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                //Create a data reader and Execute the command
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                //Read the data and store them in the list
+                while (dataReader.Read())
+                {
+                    if (int.Parse(dataReader["idFichier"] + "") > max)
+                        max = int.Parse(dataReader["idFichier"] + "");
+                }
+
+                //close Data Reader
+                dataReader.Close();
+
+                //close Connection
+                this.closeConnection();
+
+                //return list to be displayed
+                return max;
+            }
+            else
+                return max;
+        }
     }
 }
