@@ -210,7 +210,7 @@ namespace FileGestion_v1._0
                     if(ForD == 0)
                     {
                         Metier m = new Metier();
-                        //m.copyDossier(idCopier, currentDirectory);
+                        m.copyDossier(idCopier, currentDirectory);
                         m.copyDossierRecurs(idCopier, currentDirectory);
                     }else if(ForD == 1)
                     {
