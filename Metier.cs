@@ -94,6 +94,7 @@ namespace FileGestion_v1._0
             {
                 foreach(Dossier d in listFolders)
                 {
+
                     int id1 = dataBase.getLastFolderCreated();
                     dataBase.copyDossier("dossier", d.getIdDossier(), id1); 
                     int id = dataBase.getLastFolderCreated();
