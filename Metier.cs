@@ -54,6 +54,7 @@ namespace FileGestion_v1._0
                 {
                     deleteDossierRecurs(d.getIdDossier());
                     dataBase.deleteDossier(d.getIdDossier());
+
                 }
             }
             List<Fichier> listFiles = new List<Fichier>();
